@@ -1,7 +1,7 @@
 <div class="w-full h-full max-w-screen-2xl mx-auto relative text-slate-800">
-  
-  <div class="wrapper w-full h-full absolute top-0 z-30">
-    <header class="flex items-center justify-between px-16 py-6 font-semibold border-b border-slate-800">
+  <div class="wrapper w-full h-full absolute top-0 z-30 relative">
+   <div class="w-full h-[78rem] absolute top-0 mx-auto bg-no-repeat bg-cover" style="background-image: url(/assets/challange/background.png)"></div>
+    <header class="flex items-center justify-between px-16 py-6 font-semibold border-b border-slate-800 relative z-20">
       <nav class="w-1/4">
         <ul class="flex items-center justify-between">
           <li>
@@ -16,19 +16,19 @@
         </ul>
       </nav>
       <div class="w-1/4 flex items-center justify-center">
-        <%#= image_tag("challange/logo_dark.png") %>
+        <%= image_tag("challange/logo_dark.png") %>
       </div>
       <div class="w-1/5 flex items-center justify-between">
         <div class="w-5 h-5">
-          <%#= image_tag("challange/facebook.png") %>
+          <%= image_tag("challange/facebook.png") %>
         </div>
         <div class="w-5 h-5">
-          <%#= image_tag("challange/instagram.png") %>
+          <%= image_tag("challange/instagram.png") %>
         </div>
         <button class="w-48 px-3 py-2 border border-slate-800 font-bold">Log in</button>
       </div>
     </header>
-    <section class="w-full max-w-xl h-screen px-16 mt-44">
+    <section class="w-full max-w-xl h-screen px-16 mt-44 relative z-20">
       <h4 class="text-5xl font-bold">Print Weekly Challenge</h4>
       <p class="text-xl mt-8">A platform for 3d printing community. Check out these fantastic submissions to our
         Monday Prompts.</p>
@@ -37,7 +37,7 @@
     <main class="px-16 -mt-44">
       <section class="flex justify-between mt-12">
         <div class="w-full max-w-2xl">
-          <%#= image_tag("challange/current_challange.png") %>
+          <%= image_tag("challange/current_challange.png") %>
         </div>
         <div class="w-2/5 pr-12 mt-12">
           <div>
@@ -68,7 +68,9 @@
         </div>
         <div class="flex justify-between items-center mt-12">
           <div class="w-1/3 mr-8">
-         
+            <div class="w-full h-80 bg-no-repeat bg-cover"
+              style="background-image: url(/assets/challange/challange1.png)">
+            </div>
             <div class="bg-white">
               <div class="flex justify-between items-center py-2 px-8">
                 <p>23 May 2021 - 25 Nov 2021</p>
@@ -82,14 +84,16 @@
                 <div class="flex justify-between items-center px-8">
                   <p class="text-xl">Results</p>
                   <p>
-                    <%#= image_tag("challange/arrow.png") %>
+                    <%= image_tag("challange/arrow.png") %>
                   </p>
                 </div>
               </div>
             </div>
           </div>
           <div class="w-1/3 mr-8">
-            
+            <div class="w-full h-80 bg-no-repeat bg-cover"
+              style="background-image: url(/assets/challange/challange2.png)">
+            </div>
             <div class="bg-white">
               <div class="flex justify-between items-center py-2 px-8 bg-slate-800 text-white">
                 <p>23 May 2021 - 25 Nov 2021</p>
@@ -102,14 +106,16 @@
                 <div class="flex justify-between items-center px-8">
                   <p class="text-xl">Results</p>
                   <p>
-                    <%#= image_tag("challange/arrow.png") %>
+                    <%= image_tag("challange/arrow.png") %>
                   </p>
                 </div>
               </div>
             </div>
           </div>
           <div class="w-1/3">
-           
+            <div class="w-full h-80 bg-no-repeat bg-cover"
+              style="background-image: url(/assets/challange/challange3.png)">
+            </div>
             <div class="bg-white">
               <div class="flex justify-between items-center py-2 px-8">
                 <p>23 May 2021 - 25 Nov 2021</p>
@@ -123,7 +129,7 @@
                 <div class="flex justify-between items-center px-8">
                   <p class="text-xl">Results</p>
                   <p>
-                    <%#= image_tag("challange/arrow.png") %>
+                    <%= image_tag("challange/arrow.png") %>
                   </p>
                 </div>
               </div>
@@ -133,7 +139,7 @@
       </section>
       <section class="w-full mt-36 relative flex overflow-hidden pb-24">
         <div class="w-[100rem] absolute -top-12 -right-48 z-10">
-          <%#= image_tag("challange/octaedr.png") %>
+          <%= image_tag("challange/octaedr.png") %>
         </div>
         <h4 class="text-6xl font-bold w-1/2 mt-24">What are we <br /> famous for?</h4>
         <div class="w-2/5 mt-24">
@@ -153,16 +159,16 @@
           <div>
             <div class="flex justify-between items-center w-2/5 mt-24">
               <div>
-                <%#= image_tag("challange/user1.png") %>
+                <%= image_tag("challange/user1.png") %>
               </div>
               <div>
-                <%#= image_tag("challange/user2.png") %>
+                <%= image_tag("challange/user2.png") %>
               </div>
               <div>
-                <%#= image_tag("challange/user3.png") %>
+                <%= image_tag("challange/user3.png") %>
               </div>
               <div>
-                <%#= image_tag("challange/user4.png") %>
+                <%= image_tag("challange/user4.png") %>
               </div>
             </div>
             <p class="mt-4">Our Jury</p>
@@ -174,7 +180,7 @@
       <div class="w-full max-w-screen-2xl mx-auto px-16 ">
         <div class="flex">
           <div class="w-1/4">
-            <%#= image_tag("challange/logo_light.png") %>
+            <%= image_tag("challange/logo_light.png") %>
           </div>
           <nav>
             <ul>
@@ -196,7 +202,6 @@
             </li>
             <li class="my-2">
               <a href="#">Instagram</a>
-
             </li>
             <li class="my-2">
               <a href="#">Twitter</a>
