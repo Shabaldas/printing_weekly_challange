@@ -9,6 +9,13 @@ class ChallengeDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     challenge_members: Field::HasMany,
+    main_challenge_picture: Field::ActiveStorage.with_options(
+      show_preview_size: [200, 200],
+      destroy_url: proc do |namespace, resource, attachment|
+        [:main_challenge_picture_admin_challenge, { attachment_id: attachment.id }]
+      end
+    ),
+    challenge_3d_model: Field::ActiveStorage,
     id: Field::Number,
     title: Field::String,
     description: Field::String,
@@ -30,15 +37,18 @@ class ChallengeDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = %i[
     challenge_members
-    id
     title
-    description
+    status
+    money_prize
+    main_challenge_picture
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
   # an array of attributes that will be displayed on the model's show page.
   SHOW_PAGE_ATTRIBUTES = %i[
     challenge_members
+    main_challenge_picture
+    challenge_3d_model
     id
     title
     description
@@ -58,6 +68,8 @@ class ChallengeDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = %i[
     challenge_members
+    main_challenge_picture
+    challenge_3d_model
     title
     description
     status

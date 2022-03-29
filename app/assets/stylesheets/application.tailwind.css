@@ -12,3 +12,16 @@
 
 */
 @import 'actiontext.css';
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&display=swap');
+
+@layer base {
+  @font-face {
+    font-family: 'IBMPlexMono';
+    src: local('IBMPlexMono'), url(./fonts/IBMPlexMono.ttf) format('ttf');
+  }
+}
+
+@font-face {
+  font-family: 'IBMPlexMono';
+  src: local('IBMPlexMono'), url(./fonts/IBMPlexMono.ttf) format('ttf');
+}

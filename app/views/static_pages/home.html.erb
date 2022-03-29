@@ -5,7 +5,7 @@
       <nav class="w-1/4">
         <ul class="flex items-center justify-between">
           <li>
-            <a href="#">Challenges</a>
+            <%= link_to 'Challenges', challenges_path %>
           </li>
           <li>
             <a href="#">Rules</a>
@@ -176,41 +176,5 @@
         </div>
       </section>
     </main>
-    <footer class="text-white z-30 relative pt-12 pb-2">
-      <div class="w-full max-w-screen-2xl mx-auto px-16 ">
-        <div class="flex">
-          <div class="w-1/4">
-            <%= image_tag("challange/logo_light.png") %>
-          </div>
-          <nav>
-            <ul>
-              <li class="my-2">
-                <a href="#">Challenges</a>
-              </li>
-              <li class="my-2">
-                <a href="#">Rules</a>
-              </li>
-              <li class="my-2">
-                <a href="#">Jury</a>
-              </li>
-            </ul>
-          </nav>
-          <nav class="ml-24">
-           <ul>
-            <li class="my-2">
-              <a href="#">Facebook</a>
-            </li>
-            <li class="my-2">
-              <a href="#">Instagram</a>
-            </li>
-            <li class="my-2">
-              <a href="#">Twitter</a>
-            </li>
-           </ul>
-          </nav>
-        </div>
-      </div>
-      <p class="text-slate-400 text-xs py-3 border-t border-slate-500 mt-12 px-16 ">© 2021 All rights reserved</p>
-    </footer>
   </div>
 </div>

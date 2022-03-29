@@ -40,6 +40,12 @@ module Admin
     #     transform_values { |value| value == "" ? nil : value }
     # end
 
+    def destroy_main_challenge_picture
+      main_challenge_picture = requested_resource.main_challenge_picture
+      main_challenge_picture.purge
+      redirect_back(fallback_location: requested_resource)
+    end
+
     # See https://administrate-prototype.herokuapp.com/customizing_controller_actions
     # for more information
   end

@@ -9,10 +9,7 @@ class ChallengeMemberDashboard < Administrate::BaseDashboard
   # on pages throughout the dashboard.
   ATTRIBUTE_TYPES = {
     challenge: Field::BelongsTo,
-    user: Field::BelongsTo.with_options(
-      searchable: true,
-      searchable_fields: ['email']
-    ),
+    user: Field::BelongsTo.with_options(class_name: "User"),
     id: Field::Number,
     link_to_instagram: Field::String,
     approve: Field::Select.with_options(searchable: false, collection: ->(field) { field.resource.class.send(field.attribute.to_s.pluralize).keys }),
@@ -71,7 +68,7 @@ class ChallengeMemberDashboard < Administrate::BaseDashboard
   # Overwrite this method to customize how challenge members are displayed
   # across all pages of the admin dashboard.
   #
-  # def display_resource(challenge_member)
-  #   "ChallengeMember ##{challenge_member.id}"
-  # end
+  def display_resource(challenge_member)
+    "#{challenge_member.user.nick_name} #{challenge_member.user.email}"
+  end
 end

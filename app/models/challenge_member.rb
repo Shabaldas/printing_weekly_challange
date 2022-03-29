@@ -6,6 +6,8 @@ class ChallengeMember < ApplicationRecord
 
   validates :approve, presence: true
 
+  validates :user_id, uniqueness: { scope: [:challenge_id, :user_id] }
+
   scope :active_members, -> { where(approve: :yes) }
   scope :not_active_members, -> { where(approve: :no) }
   scope :active_members_for_challenge, ->(challenge) { where(challenge: challenge, approve: yes) }
